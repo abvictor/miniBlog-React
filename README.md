@@ -1,7 +1,7 @@
 ## Este projeto foi desenvolvido durante um curso de React
 <div align="center">
   
-(https://user-images.githubusercontent.com/43121767/181079909-bd28b8dc-e2f5-4e81-a057-1dbf045da35e.png)
+![Final project design](https://user-images.githubusercontent.com/43121767/181079909-bd28b8dc-e2f5-4e81-a057-1dbf045da35e.png)
 
 
 </div>
