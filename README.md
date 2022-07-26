@@ -25,6 +25,9 @@ Este projeto foi desenvolvido juntamente com professor Matheus Battisti, que é 
 - npm start ou yarn start
 
 ### Links
+#### Link do app rodando no Heroku
+https://miniblogreact.herokuapp.com/
+
 ##### Link da plataforma
 
 https://www.udemy.com/
