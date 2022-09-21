@@ -2,13 +2,15 @@ import styles from "./EditPost.module.css";
 
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-
+import { useAuthValue } from "../../context/AuthContext";
 import { useFetchDocument } from "../../hooks/useFetchDocument";
 import { useUpdateDocument } from "../../hooks/useUpdateDocument";
 
 const EditPost = () => {
   const { id } = useParams();
   const { document: post } = useFetchDocument("posts", id);
+
+ 
 
   const [title, setTitle] = useState("");
   const [image, setImage] = useState("");
@@ -29,6 +31,8 @@ const EditPost = () => {
     }
   }, [post]);
 
+  const { user } = useAuthValue();
+
   const navigate = useNavigate();
 
   const { updateDocument, response } = useUpdateDocument("posts");
@@ -45,15 +49,21 @@ const EditPost = () => {
     }
 
     // create tags array
-    // const tagsArray = tags.split(",").map((tag) => tag.trim().toLowerCase());
+    const tagsArray = tags.split(",").map((tag) => tag.trim());
+
 
     const data = {
       title,
       image,
       body,
-      tags,
+      tags: tagsArray,
     };
 
+ 
+
+    updateDocument(id, data);
+
+    // redirect to home page
     navigate("/dashboard");
   };
 
@@ -116,7 +126,7 @@ const EditPost = () => {
             {!response.loading && <button className="btn">Editar</button>}
             {response.loading && (
               <button className="btn" disabled>
-                Aguarde...
+                Aguarde.. .
               </button>
             )}
             {(response.error || formError) && (

@@ -10,7 +10,7 @@ const Register = () => {
 
   const [error, setError] = useState("");
 
-  const { createUser, error: authError, loading } = useAuthentication();
+  const { createUser, error: authError } = useAuthentication();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -33,7 +33,7 @@ const Register = () => {
       setError(authError);
     }
   });
-  console.log(displayName, email, password, confirmPassword);
+  
   return (
     <div className={styles.register}>
       <h2>Cadastre-se para começar</h2>
