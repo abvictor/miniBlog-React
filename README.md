@@ -26,7 +26,7 @@ Este projeto foi desenvolvido juntamente com professor Matheus Battisti, que é 
 
 ### Links
 #### Link do app rodando no Heroku
-https://miniblogreact.herokuapp.com/
+mini-blog-react-p630f8wup-abvictor.vercel.app
 
 ##### Link da plataforma
 
