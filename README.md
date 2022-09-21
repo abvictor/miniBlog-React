@@ -25,7 +25,7 @@ Este projeto foi desenvolvido juntamente com professor Matheus Battisti, que é 
 - npm start ou yarn start
 
 ### Links
-#### Link do app rodando no Heroku
+#### Link do app rodando no Vercel
 [mini-blog-react-p630f8wup-abvictor.vercel.app](https://mini-blog-react-p630f8wup-abvictor.vercel.app/)
 
 ##### Link da plataforma
