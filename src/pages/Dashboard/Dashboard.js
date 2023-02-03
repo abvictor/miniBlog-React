@@ -13,10 +13,6 @@ const Dashboard = () => {
   const { documents: posts } = useFetchDocuments("posts", null, uid);
 
   const { deleteDocument } = useDeleteDocument("posts");
-
-  console.log(uid);
-  console.log(posts);
-
   return (
     <div className={styles.dashboard}>
       <h2>Dashboard</h2>
