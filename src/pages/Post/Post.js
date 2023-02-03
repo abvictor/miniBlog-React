@@ -1,10 +1,11 @@
 import styles from "./Post.module.css";
 import { useParams } from "react-router-dom";
-import { useFetchDocuments } from "../../hooks/useFetchDocuments";
+import { useFetchDocument } from "../../hooks/useFetchDocument";
 
 const Post = () => {
   const { id } = useParams();
-  const { document: post, loading } = useFetchDocuments("posts", id);
+  const { document: post, loading } = useFetchDocument("posts", id);
+
   return (
     <div className={styles.post_container}>
       {loading && <p>Carregando post...</p>}
